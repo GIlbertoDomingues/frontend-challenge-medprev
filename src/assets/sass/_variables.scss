@@ -1,0 +1,33 @@
+/*
+// Colors
+*/
+
+$green: #6ead41;
+$dark-green: #005a3c;
+$brown: #525252;
+$yellow: #eab000;
+$gray: #c2d5ce;
+$light-gray: #d7efe1;
+$lighter-gray: #f9f9f9;
+$white: #fff;
+
+
+/* Typography
+// */
+$base-font-size: 14px;
+$text-color: $brown;
+$title-color: $dark-green;
+$base-font-family: 'Ubuntu', sans-serif;
+$base-title-family: 'Comfortaa', sans-serif;
+$base-line-height: 25px;
+
+$base-font-weight-light: 300;
+$base-font-weight: 400;
+$base-font-weight-bold: 700;
+
+/* Helps
+// */
+$background-color: $white;
+$border-color: $gray;
+$link-color: $green;
+$link-hover-color: dark($green, 5%);

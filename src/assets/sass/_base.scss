@@ -1,0 +1,48 @@
+
+body {
+  color: $text-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight-light;
+  line-height: $base-line-height;
+}
+
+/*
+// Typography
+*/
+h1, h2, h3, h4, h5 {
+  font-family: $base-title-family;
+  font-weight: $base-font-weight-bold;
+  color: $title-color;
+}
+
+.title-one {
+  font-size: 48px;
+  line-height: 50px;
+  font-weight: $base-font-weight-bold;
+  font-family: $base-title-family;
+}
+
+.title-two {
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: $base-font-weight-bold;
+  font-family: $base-title-family;
+
+}
+
+p {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $link-color;
+  text-decoration: none;
+}

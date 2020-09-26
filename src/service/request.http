@@ -1,0 +1,42 @@
+### Required REST Client extensions // https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+#### Send resquest Ctrl + Alt + R
+
+###
+GET https://jsonbox.io/box_d5b7ab9e6b7f374be257/user/5f6a118f3e30c900178d3ce6
+
+###
+POST https://jsonbox.io/box_d5b7ab9e6b7f374be257/user HTTP/1.1
+content-type: application/json
+
+{
+  "type" : "Pessoa física",
+  "name" : "Gilberto Domingues Cordeiro",
+  "document" : "050.844.209-57",
+  "gender" : "Masculino",
+  "birthday" : "14/07/1987",
+  "email" : "gdccomunicacao@gmail.com",
+  "phone" : "(41) 9.8720-5647",
+  "cellphone" : "(41)9.9162-4608",
+  "photo" : "url_da_imagem"
+}
+
+###
+PUT  https://jsonbox.io/box_d5b7ab9e6b7f374be257/user/5f6ab45fd195600017c17af7 HTTP/1.1
+content-type: application/json
+
+{
+  "type" : "Pessoa física",
+  "name" : "Gilberto Domingues Cordeiro",
+  "document" : "050.844.209-57",
+  "gender" : "Masculino",
+  "birthday" : "14/07/1987",
+  "email" : "gdccomunicacao@gmail.com",
+  "phone" : "(41) 9.8720-5647",
+  "cellphone" : "(41)9.9162-4608",
+  "photo" : "url_da_imagem"
+}
+
+###
+
+DELETE   https://jsonbox.io/box_d5b7ab9e6b7f374be257/user/5f6ab45fd195600017c17af7 HTTP/1.1
+
