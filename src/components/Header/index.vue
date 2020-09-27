@@ -13,7 +13,7 @@
           <router-link to="/about" class="btn btn-link">Usuários</router-link>
         </li>
         <li>
-          <a target="_blank" href="#" class="btn btn-link">GitHub</a>
+          <a target="_blank" href="https://github.com/GIlbertoDomingues/frontend-challenge-medprev" class="btn btn-link">GitHub</a>
         </li>
       </ul>
     </nav>
