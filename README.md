@@ -1,5 +1,7 @@
 # MEDPREV Frontend Challenge
 
+URL https://medprev-challenge.netlify.app/
+
 ### Project setup
 ```
 yarn install
