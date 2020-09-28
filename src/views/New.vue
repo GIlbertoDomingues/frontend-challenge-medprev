@@ -28,12 +28,12 @@
             <template v-slot:content>
               <div class="form-group">
                 <label for="name">Nome</label>
-                <input type="text" class="form-control" id="name" v-model="person.name">
+                <input type="text" class="form-control" id="name" v-model="person.name" placeholder="Digite seu nome">
               </div>
 
               <div class="form-group">
                 <label for="document">CPF</label>
-                <input type="text" class="form-control" id="document" v-model="person.document" v-mask="'###.###.###-##'" >
+                <input type="text" class="form-control" id="document" v-model="person.document" placeholder="000.000.000-00" v-mask="'###.###.###-##'" >
               </div>
 
               <div class="form-group">
@@ -47,7 +47,7 @@
 
               <div class="form-group">
                 <label for="birthday">Data de Nascimento</label>
-                <input type="text" class="form-control" id="birthday" v-model="person.birthday" v-mask="'##/##/####'">
+                <input type="text" class="form-control" id="birthday" v-model="person.birthday" placeholder="00/00/0000" v-mask="'##/##/####'">
               </div>
             </template>
           </MCard>
@@ -56,17 +56,17 @@
             <template v-slot:content>
               <div class="form-group">
                 <label for="name">Nome</label>
-                <input type="text" class="form-control" id="name" v-model="person.name">
+                <input type="text" class="form-control" id="name" v-model="person.name" placeholder="Digite seu nome">
               </div>
 
               <div class="form-group">
                 <label for="companyname">Razão social</label>
-                <input type="text" class="form-control" id="companyname" v-model="person.companyname" >
+                <input type="text" class="form-control" id="companyname" v-model="person.companyname" placeholder="Digite sua razão social">
               </div>
 
               <div class="form-group">
                 <label for="document">CNPJ</label>
-                <input type="text" class="form-control" id="document" v-model="person.document" v-mask="'##.###.###/####-##'" >
+                <input type="text" class="form-control" id="document" v-model="person.document" placeholder="00.000.000/0000-00" v-mask="'##.###.###/####-##'" >
               </div>
             </template>
           </MCard>
@@ -75,15 +75,15 @@
             <template v-slot:content>
               <div class="form-group">
                 <label for="email">E-mail</label>
-                <input type="email" class="form-control" id="email" v-model="person.email">
+                <input type="email" class="form-control" id="email" v-model="person.email" placeholder="Digite seu e-mail">
               </div>
               <div class="form-group">
                 <label for="phone">Telefone</label>
-                <input type="text" class="form-control" id="phone" v-model="person.phone" v-mask="['(##) ####-####', '(##) #####-####']">
+                <input type="text" class="form-control" id="phone" v-model="person.phone" placeholder="Digite telefone" v-mask="['(##) ####-####', '(##) #####-####']">
               </div>
               <div class="form-group">
                 <label for="cellphone">Celular</label>
-                <input type="text" class="form-control" id="cellphone" v-model="person.cellphone" v-mask="['(##) ####-####', '(##) #####-####']">
+                <input type="text" class="form-control" id="cellphone" v-model="person.cellphone" placeholder="Digite celular" v-mask="['(##) ####-####', '(##) #####-####']">
               </div>
             </template>
           </MCard>
@@ -94,7 +94,7 @@
                 <label for="zipcode">CEP</label>
                 <div class="row">
                   <div class="col-sm-5">
-                    <input type="text" class="form-control" id="zipcode" v-model="person.address.zipcode" v-mask="'#####-###'">
+                    <input type="text" class="form-control" id="zipcode" v-model="person.address.zipcode" placeholder="00000-000" v-mask="'#####-###'">
                   </div>
                 </div>
               </div>
@@ -142,23 +142,23 @@ export default {
     return {
       person: {
         type: 'Pessoa física',
-        name: 'Gilberto Domingues Cordeiro',
-        document: '050.844.209-57',
+        name: null,
+        document: null,
         companyname: null,
-        gender: 'Masculino',
-        birthday: '14/07/1987',
-        email: 'gdccomunicacao@gmail.com',
-        phone: '(41) 9.8720-5647',
-        cellphone: '(41)9.9162-4608',
+        gender: null,
+        birthday: null,
+        email: null,
+        phone: null,
+        cellphone: null,
         photo: image,
         address: {
-          zipcode: '82940-150',
-          street: 'Rua Goiânia',
-          number: '1253',
-          complement: '1 401',
-          neighbour: 'Cajuru',
-          city: 'Curitiba',
-          state: 'Paraná',
+          zipcode: null,
+          street: null,
+          number: null,
+          complement: null,
+          neighbour: null,
+          city: null,
+          state: null,
         },
       },
     };
