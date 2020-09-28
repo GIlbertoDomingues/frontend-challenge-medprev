@@ -20,7 +20,7 @@
         <router-link
           :key="k"
           :class="k === 'id' ? 'hidden' : '' || k === 'state' ? 'align-right' : ''"
-          :to="{ name: 'people.single', params: { id: items.id } }"
+          :to="{ name: 'people', params: { id: items.id } }"
           v-for="(item, k) in items"
           tag="td"
           v-html="item"

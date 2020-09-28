@@ -12,8 +12,17 @@ export const deletePerson = (id) => new Promise((resolve, reject) => http.delete
   .then(({ data }) => resolve(data))
   .catch((err) => reject(err)));
 
+export const sendPerson = (params = {}) => new Promise((resolve, reject) => http.post('/user/', params)
+  .then(({ data }) => resolve(data))
+  .catch((err) => reject(err)));
+
+export const updatedPerson = (id) => new Promise((resolve, reject) => http.pu(`/user/${id}`)
+  .then(({ data }) => resolve(data))
+  .catch((err) => reject(err)));
+
 export default {
   getPeople,
   getPerson,
   deletePerson,
+  sendPerson,
 };

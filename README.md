@@ -34,7 +34,7 @@ yarn lint
 - [x] Ter opção para excluir um cadastro;
 - [ ] No cadastro de endereço, poder cadastrar mais de um;
 - [ ] Aplicar validação dos campos obrigatórios nos formulários;
-- [ ] Aplicar máscaras nos campos de CPF, CNPJ, Data, Número e CEP;
+- [x] Aplicar máscaras nos campos de CPF, CNPJ, Data, Número e CEP;
 - [x] Utilizar ESLint com a configuração AIRBNB;
 - [x] Entregar código fonte em um repositório público (GitHub, Bitbucket, etc...)
 

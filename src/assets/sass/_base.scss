@@ -46,3 +46,43 @@ a:hover {
   color: $link-color;
   text-decoration: none;
 }
+
+// Buttons
+.mui.btn.btn-primary {
+  background-color: $green;
+  border-color: $green;
+  border-radius: 0;
+  padding: 8px 26px;
+
+  &:hover {
+    background-color: lighten($green, 10%);
+    border-color: lighten($green, 10%);
+  }
+
+  &:active,
+  &:focus {
+    background-color: darken($green, 15%);
+    border-color: darken($green, 15%);
+    box-shadow: none
+  }
+}
+
+.mui.btn.btn-link {
+  color: $gray;
+  border-radius: 0;
+  padding: 8px 26px;
+
+  &:hover {
+    background-color: lighten($gray, 10%);
+    border-color: lighten($gray, 10%);
+    color: $black;
+    text-decoration: none;
+  }
+
+  &:active,
+  &:focus {
+    background-color: darken($gray, 15%);
+    border-color: darken($gray, 15%);
+    box-shadow: none
+  }
+}

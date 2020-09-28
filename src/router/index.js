@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import People from '../views/People.vue';
+import New from '../views/New.vue';
 
 Vue.use(VueRouter);
 
@@ -13,8 +14,13 @@ const routes = [
   },
   {
     path: '/people/:id',
-    name: 'people.single',
+    name: 'people',
     component: People,
+  },
+  {
+    path: '/new/',
+    name: 'new',
+    component: New,
   },
 ];
 

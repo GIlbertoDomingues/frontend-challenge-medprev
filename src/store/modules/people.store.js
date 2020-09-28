@@ -1,5 +1,7 @@
 /* eslint-disable no-shadow */
-import { getPeople, deletePerson, getPerson } from '../../services/people';
+import {
+  getPeople, deletePerson, getPerson, sendPerson,
+} from '../../services/people';
 import router from '../../router';
 
 const state = {
@@ -63,6 +65,18 @@ const actions = {
     deletePerson(id)
       .then((res) => {
         console.log('res delete :>> ', res);
+        router.push({ name: 'Home' });
+        commit('TOGGLE_LOADING_PEOPLE', false);
+      }).catch((e) => {
+        this.erros = e;
+      });
+  },
+
+  sendNewPerson({ commit }, params) {
+    commit('TOGGLE_LOADING_PEOPLE', true);
+    sendPerson(params)
+      .then((res) => {
+        console.log('res Save :>> ', res);
         router.push({ name: 'Home' });
         commit('TOGGLE_LOADING_PEOPLE', false);
       }).catch((e) => {
