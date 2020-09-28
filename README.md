@@ -25,12 +25,12 @@ yarn lint
 
 ## Objetivos
 
-- [ ] Desenvolvimento de um CRUD de pessoa;
-- [ ] Protótipo completamente funcional, se possível publicado no Netlify;
+- [x] Desenvolvimento de um CRUD de pessoa;
+- [x] Protótipo completamente funcional, se possível publicado no Netlify;
 - [x] Tentar utilizar a maior parte das tecnologias;
 - [x] Mostrar domínio sobre criação e uso de componentes VueJS;
 - [x] Ter uma tela para listar os cadastros com paginação;
-- [ ] Ter uma tela para cadastro/edição dos cadastros;
+- [x] Ter uma tela para cadastro/edição dos cadastros;
 - [x] Ter opção para excluir um cadastro;
 - [ ] No cadastro de endereço, poder cadastrar mais de um;
 - [ ] Aplicar validação dos campos obrigatórios nos formulários;
