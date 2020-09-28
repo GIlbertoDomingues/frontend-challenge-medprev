@@ -1,6 +1,9 @@
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable no-alert */
 /* eslint-disable no-shadow */
+
 import {
-  getPeople, deletePerson, getPerson, sendPerson,
+  getPeople, deletePerson, getPerson, sendPerson, updatedPerson,
 } from '../../services/people';
 import router from '../../router';
 
@@ -26,16 +29,14 @@ const actions = {
   getAllPeople({ commit }) {
     commit('TOGGLE_LOADING_PEOPLE', true);
     getPeople().then((res) => {
-      console.log('res :>> ', res);
       this.people = res.map((person) => ({
-        // eslint-disable-next-line no-underscore-dangle
         id: person._id,
         name: person.name,
         document: person.document,
         email: person.email ? person.email : '--',
         phone: person.phone ? person.phone : '--',
-        city: person.city ? person.city : '--',
-        state: person.state ? person.state : '--',
+        city: person.address.city ? person.address.city : '--',
+        state: person.address.state ? person.address.state : '--',
       }));
 
       commit('SET_PEOPLE_LIST', this.people);
@@ -51,7 +52,6 @@ const actions = {
     getPerson(id)
       .then((res) => {
         this.personData = res;
-        console.log('res :>> ', res);
         commit('SET_PERSON', this.personData);
         commit('TOGGLE_LOADING_PEOPLE', false);
       }).catch((e) => {
@@ -63,8 +63,8 @@ const actions = {
   deletePersonId({ commit }, id) {
     commit('TOGGLE_LOADING_PEOPLE', true);
     deletePerson(id)
-      .then((res) => {
-        console.log('res delete :>> ', res);
+      .then(() => {
+        alert('Usuário exluido com sucesso!');
         router.push({ name: 'Home' });
         commit('TOGGLE_LOADING_PEOPLE', false);
       }).catch((e) => {
@@ -75,9 +75,20 @@ const actions = {
   sendNewPerson({ commit }, params) {
     commit('TOGGLE_LOADING_PEOPLE', true);
     sendPerson(params)
-      .then((res) => {
-        console.log('res Save :>> ', res);
+      .then(() => {
+        alert('Usuário cadastrado com sucesso!');
         router.push({ name: 'Home' });
+        commit('TOGGLE_LOADING_PEOPLE', false);
+      }).catch((e) => {
+        this.erros = e;
+      });
+  },
+
+  updatedPersonId({ commit }, params) {
+    commit('TOGGLE_LOADING_PEOPLE', true);
+    updatedPerson(params)
+      .then(() => {
+        alert('Usuário atualizado!');
         commit('TOGGLE_LOADING_PEOPLE', false);
       }).catch((e) => {
         this.erros = e;

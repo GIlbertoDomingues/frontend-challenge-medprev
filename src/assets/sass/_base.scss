@@ -86,3 +86,14 @@ a:hover {
     box-shadow: none
   }
 }
+
+
+.wrap-actions {
+  margin: 20px 0 0;
+  display: flex;
+  justify-content: flex-end;
+
+  .btn {
+    margin-left: 15px;
+  }
+}

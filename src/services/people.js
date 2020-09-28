@@ -16,7 +16,7 @@ export const sendPerson = (params = {}) => new Promise((resolve, reject) => http
   .then(({ data }) => resolve(data))
   .catch((err) => reject(err)));
 
-export const updatedPerson = (id) => new Promise((resolve, reject) => http.pu(`/user/${id}`)
+export const updatedPerson = ({ id, params = {} }) => new Promise((resolve, reject) => http.put(`/user/${id}`, params)
   .then(({ data }) => resolve(data))
   .catch((err) => reject(err)));
 
@@ -25,4 +25,5 @@ export default {
   getPerson,
   deletePerson,
   sendPerson,
+  updatedPerson,
 };

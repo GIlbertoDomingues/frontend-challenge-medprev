@@ -21,7 +21,7 @@
           </div>
           <div class="custom-control custom-radio custom-control-inline">
             <input type="radio" id="juridica" value="Pessoa Juridica" v-model="person.type" class="custom-control-input">
-            <label class="custom-control-label" for="juridica">Pessoa Juridica</label>
+            <label class="custom-control-label" for="juridica">Pessoa Jurídica</label>
           </div>
 
           <MCard v-if="person.type === 'Pessoa física'" title-card="Dados pessoais">
@@ -52,7 +52,7 @@
             </template>
           </MCard>
 
-          <MCard v-if="person.type === 'Pessoa Juridica'" title-card="Dados Juridica">
+          <MCard v-if="person.type === 'Pessoa Juridica'" title-card="Dados Jurídica">
             <template v-slot:content>
               <div class="form-group">
                 <label for="name">Nome</label>
@@ -125,7 +125,7 @@
 
           <div class="wrap-actions">
             <router-link to="/" class="mui btn btn-link">Voltar</router-link>
-            <button type="subimit" class="mui btn btn-primary">Enviar</button>
+            <button type="submit" class="mui btn btn-primary">Enviar</button>
           </div>
         </form>
       </div>
@@ -239,13 +239,4 @@ export default {
   }
 }
 
-.wrap-actions {
-  margin: 20px 0;
-  display: flex;
-  justify-content: flex-end;
-
-  .btn {
-    margin-left: 15px;
-  }
-}
 </style>

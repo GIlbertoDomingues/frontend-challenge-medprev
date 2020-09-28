@@ -1,6 +1,6 @@
 import http from './http';
 import {
-  getPeople, getPerson, deletePerson, sendPerson,
+  getPeople, getPerson, deletePerson, sendPerson, updatedPerson,
 } from './people';
 
 export default {
@@ -9,4 +9,5 @@ export default {
   getPerson,
   deletePerson,
   sendPerson,
+  updatedPerson,
 };
